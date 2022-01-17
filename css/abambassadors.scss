@@ -1,0 +1,49 @@
+---
+  # Front matter comment to ensure Jekyll properly reads file.
+---
+
+//******* Variables
+
+// Numbers
+$color-percentage: 10%;
+$pill-radius: 200px;
+
+// Colors
+$ab-black: #000000;
+$ab-white: #F4F4F4;
+$ab-deep-grey: #6D6D6D;
+$ab-grey: #D1D1D1;
+$hospitality-talks-blue: #0900A7;
+$hospitality-talks-blue-dark: darken($hospitality-talks-blue,20%);
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+$lato: 'Lato', sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+// Animation
+@keyframes boing{
+  15%{
+    transform-origin: center center;
+    transform:scale(1.4, 1.2)
+  }
+
+  40%{
+    transform-origin: center center;
+    transform:scale(0.9, 0.9)
+  }
+
+  75%{
+    transform-origin: center center;
+    transform:scale(1.08, 1)
+  }
+
+  100%{
+    transform-origin: center center;
+    transform:scale(1, 1)
+  }
+}
+//******* End of Variables

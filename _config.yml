@@ -11,8 +11,13 @@ description: > # this means to ignore newlines until "baseurl:"
   AB Ambassadors is an independent global tourism and hospitality advisory and asset management firm to help organizations achieve their goals by providing strategic guidance. The focused initiatives include addressing operations for optimum efficiency, maximizing revenue generation, and focused sales & marketing activities. Support areas and practice include leadership development, project master planning review, predevelopment analysis, due diligence, repositioning, food and beverage consulting, operator selection and asset management.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abambassadors.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+
+ab-email: me@abid-butt.com
+abambassadors-linkedin: https://www.linkedin.com/company/ab-ambassadors/
 
 # Build settings
 markdown: kramdown
+
+collections:
+  services:
+    output: false

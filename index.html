@@ -2,22 +2,44 @@
 layout: default
 ---
 
-<div class="home">
+<div class="cell grid-x hero-container">
+  <p class="hero-text">
+    AB Ambassadors is an independent global tourism and hospitality advisory and asset management firm to help organizations achieve their goals by providing strategic guidance. The focused initiatives include addressing operations for optimum efficiency, maximizing revenue generation, and focused sales & marketing activities. Support areas and practice include leadership development, project master planning review, predevelopment analysis, due diligence, repositioning, food and beverage consulting, operator selection and asset management.
+  </p>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
+<div class="cell grid-x our-services">
+  <div class="cell medium-4 grid-x image-container">
+    <!-- TODO images go here -->
+  </div>
+  <div class="cell medium-8 grid-x text-area">
+    <div class="cell">
+      <h2>Our Services</h2>
+      <p>
+        Attention to detail and thoughtful business transformation is aimed at helping business successfully manage the disruptive forces in the industry considering changing consumer behavior. Keeping abreast of latest trends and creating an innovation culture is imperative for navigating business threats for success. We can help create a strategic vision to combat disruption through development of new products, services, and positioning that set the hotel apart from the competition.
+      </p>
+    </div>
+    {% assign services_order = site.services | sort: 'order' %}
+    {%- for service in services_order -%}
+      <div class="cell service">
+        <h3>{{service.title}}</h3>
+        <p class="description">{{service.description}}</p>
+        {{service.content}}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="cell grid-x contact-container align-center">
+  <div class="cell shrink">
+    <h2>Get In Touch</h2>
+    <a href="mailto:{{site.ab-email}}?subject=AB Ambassadors" target="_blank" class="featured-button">
+      Email
+    </a>
+  </div>
+</div>
+<div class="cell grid-x image-buffer-container">
+  <div class="cell medium-4">
+    <!-- TODO image goes here -->
+  </div>
 </div>

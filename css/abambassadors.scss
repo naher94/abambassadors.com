@@ -100,16 +100,22 @@ h1,h2,h3,h4,h5,h6{
   padding: 4rem;
   margin-top: calc(-1 * #{$main-content-shift});
   position: relative;
-  @include breakpoint(small){ //TODO: make this work
+  @include breakpoint(small only){
     padding: 1rem;
   }
   .hero-container{
     margin-block-end: 4rem;
     .hero-text{
       font-size: 1.6rem;
+      @include breakpoint(small only){
+        font-size: 1.2rem;
+      }
     }
   }
   .our-services{
+    .image-container{
+      // background-color: cornflowerblue; //TODO Removed when Fixed
+    }
     .text-area{
       .service{
         margin-block-start: 4rem;
@@ -130,6 +136,9 @@ h1,h2,h3,h4,h5,h6{
     h2{
       font-size: 4rem;
       font-weight: $black;
+      @include breakpoint(small only){
+        font-size: 2.5rem;
+      }
     }
     .cell{
       text-align: center;
@@ -143,6 +152,9 @@ h1,h2,h3,h4,h5,h6{
   }
   &-header{
     height: 8rem;
+    @include breakpoint(small only){
+      height: 4rem;
+    }
   }
 }
 
@@ -169,6 +181,11 @@ header{
 
 footer{
   padding: 4rem 0;
+  .content-wrapper{
+    @include breakpoint(small only){
+      text-align: center;
+    }
+  }
   .social{
     a{
       color: $pure-black;

@@ -2,6 +2,8 @@
   # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import 'app';
+
 //******* Variables
 
 // Numbers
@@ -98,6 +100,9 @@ h1,h2,h3,h4,h5,h6{
   padding: 4rem;
   margin-top: calc(-1 * #{$main-content-shift});
   position: relative;
+  @include breakpoint(small){ //TODO: make this work
+    padding: 1rem;
+  }
   .hero-container{
     margin-block-end: 4rem;
     .hero-text{

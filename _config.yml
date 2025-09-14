@@ -15,9 +15,18 @@ url: "https://abambassadors.com" # the base hostname & protocol for your site
 ab-email: me@abid-butt.com
 abambassadors-linkedin: https://www.linkedin.com/company/ab-ambassadors/
 
+ht-youtube: https://www.youtube.com/channel/UCVBfsbg4K5sq6aPljJdWDBg
+ht-facebook: https://www.facebook.com/groups/hospitalitytalks/
+ht-linkedin: https://www.linkedin.com/groups/10512845/
+ht-podcast: https://podcasts.apple.com/us/podcast/hospitality-talks/id1558787121?uo=4
+ht-spotify: https://open.spotify.com/show/1nKjEOtxeiqKXybs6tyATw
+
 # Build settings
 markdown: kramdown
 
 collections:
   services:
+    output: false
+  
+  hospitality-talks:
     output: false

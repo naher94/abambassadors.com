@@ -15,10 +15,10 @@ $pure-black: #000000;
 $pure-white: #ffffff;
 $aba-grey: #EDEDED;
 
-$aba-orange: #F18E34;
+$aba-orange: #FF902B;
 
-// $hospitality-talks-blue: #0900A7;
-// $hospitality-talks-blue-dark: darken($hospitality-talks-blue,20%);
+$hospitality-talks-blue: #0900A7;
+$hospitality-talks-blue-dark: darken($hospitality-talks-blue,20%);
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
@@ -69,7 +69,7 @@ $main-content-shift: 20vh;
 body{
   background-color: $aba-grey;
   font-family: $lato;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -78,20 +78,41 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .featured-button{
-  border-radius: $pill-radius;
   padding: 0.5rem 1.5rem;
   display: inline-block;
   border-style: solid;
   border-width: 3px;
-  border-color: $pure-black;
+  border-color: $pure-white;
   text-align: center;
-  color: $pure-black;
+  color: $pure-white;
   font-weight: $bold;
   transition: all 0.20s ease-in-out;
   &:hover{
-    background-color: $pure-black;
-    color: $pure-white;
+    background-color: $pure-white;
+    color: $aba-orange;
     text-decoration: none;
+  }
+}
+
+.top-nav{
+  font-weight: $bold;
+  font-size: 1.5rem;
+  margin-block-end: 5rem;
+  padding-block-end: 2rem;
+  border-bottom: 1px #979797 solid;
+  @include breakpoint (small only){
+    margin-block-end: 3rem;
+    padding-block-end: 1rem;
+    font-size: 1.25rem;
+  }
+  .nav-item{
+    text-align: center;
+    &:first-of-type{
+      border-right: 1px #979797 solid;
+    }
+  }
+  a{
+    color: $pure-black;
   }
 }
 
@@ -129,26 +150,53 @@ h1,h2,h3,h4,h5,h6{
       }
     }
   }
-  .contact-container{
+  .cta-container{
     margin-block-start: 4rem;
-    background-color: rgba($aba-orange,0.3);
+    background-color: $aba-orange;
     padding: 3rem 1rem;
+    color: $pure-white;
+    overflow: hidden;
+    position: relative;
     h2{
-      font-size: 4rem;
+      font-size: 2rem;
       font-weight: $black;
+      margin-bottom: 0;
       @include breakpoint(small only){
         font-size: 2.5rem;
       }
     }
-    .cell{
-      text-align: center;
+    p{
+      font-size: 1.75rem;
+    }
+    .shapes{
+      position: absolute;
+      border: 1rem solid rgba($pure-white,0.3);
+      aspect-ratio: 1/1;
+      width: 10rem;
+      rotate: 45deg;
+      padding: 2rem;
+      .shape{
+        border: 0.5rem solid rgba($pure-white,0.3);
+        aspect-ratio: 1/1;
+      }
+      &-1{
+        top: -5rem;
+        left: 5rem;
+      }
+      &-2{
+        bottom: -5rem;
+        right: 10rem;
+        @include breakpoint (small only){
+          right: 5rem;
+        }
+      }
     }
   }
 }
 
 #abambassador-logo{
   &-footer{
-    height: 4rem;
+    height: 3rem;
   }
   &-header{
     height: 8rem;
@@ -181,23 +229,152 @@ header{
 
 footer{
   padding: 4rem 0;
-  .content-wrapper{
-    @include breakpoint(small only){
-      text-align: center;
-    }
+  @include breakpoint (small only){
+    padding: 4rem 2rem; 
   }
   .social{
+    .main-links, .connect-links{
+      margin-inline-end: 6rem;
+      @include breakpoint (small only){
+        margin-inline-end: 0;
+      }
+    }
+    .main-links{
+      border-right: 1px #979797 solid;
+      padding-inline-end: 6rem;
+      @include breakpoint (small only){
+        margin-block-start: 3rem;
+        padding-inline-end: 0;
+        border-right: 0;
+        // border-bottom: 1px #979797 solid;
+        padding-block-end: 2rem;
+        margin-block-end: 2rem;
+      }
+      .nav-item{
+        margin-block-end: 1rem;
+      }
+    }
+    .connect-links{
+      margin-block-end: 2rem;
+    }
+    .nav-item{
+      display: block;
+      &:not(:first-of-type){
+        margin-block-end: 1rem;
+      }
+    }
+    .main-links{
+      font-size: 1.25rem;
+      font-weight: $bold;
+    }
+    .section-title{
+      color: #929292;
+      margin-block-end: 1.5rem;
+    }
     a{
       color: $pure-black;
-      &:not(:last-of-type){
-        margin-right: 1rem;
+      display: inline;
+    }
+  }
+}
+
+//******* Hospitality Talks
+.hospitality-talks{
+  .intro{
+    margin-bottom: 6rem;
+    img{
+      height: 4rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 40em){
+        margin-bottom: 0.5rem;
       }
-      &:hover, &:focus{
-        .fab, .fas{
-          color: $aba-orange;
-          animation: boing 300ms ease-out;
+    }
+    p{
+      font-size: 1.6rem;
+      @media screen and (max-width: 40em){
+        font-size: 1.3rem;
+      }
+    }
+    .social-container{
+      margin-top: 2rem;
+      a{
+        padding: 0.5rem;
+      }
+    }
+    .social-container {
+      a{
+        color: $pure-black;
+        @media screen and (max-width: 40em){
+          font-size: 1.5em;
+        }
+        &:hover, &:focus{
+          .fa-brands, .fa-solid{
+            color: $hospitality-talks-blue;
+            animation: boing 300ms ease-out;
+          }
         }
       }
     }
   }
+  .session-container{
+    margin-bottom: 7rem;
+    @media screen and (max-width: 40em){
+      margin-bottom: 4rem;
+    }
+    iframe{
+      @supports(aspect-ratio:16/9){
+        aspect-ratio: 16/9;
+      }
+      @supports not(aspect-ratio:16/9){
+        height: 480px;
+      }
+      @media screen and (max-width: 40em){
+        height: 240px;
+      }
+    }
+    h2{
+      font-size: 2rem;
+      font-weight: $bold;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .banner{
+    background-color: rgba($hospitality-talks-blue, 0.1);
+    padding: 3rem 6rem;
+    @media screen and (max-width: 40em){
+      margin-bottom: 4rem;
+      padding: 1.5rem;
+    }
+    img{
+      @media screen and (max-width: 40em){
+        margin-bottom: 2rem;
+      }
+    }
+    a{
+      text-decoration: none;
+    }
+    .subscribe-button{
+      background-color: $hospitality-talks-blue;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: $bold;
+      font-size: 1.2rem;
+      transition: all 0.20s ease-in-out;
+
+      @media screen and (max-width: 40em){
+        padding: 0.5rem 1rem;
+      }
+      span{
+        margin-right: 0.5rem;
+      }
+      &:hover{
+        background-color: $pure-black;
+      }
+    }
+  }
 }
+//******* End of Hospitality Talks

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{%- include top-nav.html -%}
+
+<div class="hospitality-talks">
+  <section class="intro grid-x grid-padding-x">
+    <div class="cell">
+      <h1 class="visually-hidden">Hospitality Talks</h1>
+      <img src="/img/hospitality-talks-logo.svg" alt="Hospitality Talks Logo">
+      <p>This global forum brings together professionals from across the lodging and hospitality industry to connect, collaborate, and engage in meaningful dialogue.</p>
+      <p>Our mission is to foster open, solutions-driven conversations around the most pressing challenges and opportunities facing the industry today — from shifting market dynamics to innovation, sustainability, and workforce transformation.</p>
+      <p>We aim to create a platform where industry stakeholders — including owners, operators, developers, advisors, and investors — can share insights, build partnerships, and work collectively toward the greater good of the global hospitality ecosystem.</p>
+    </div>
+    <div class="cell social-container">
+      <a href="{{ site.ht-youtube }}" target="_blank"><i class="fa-brands fa-youtube fa-2x"></i></a>
+      <a href="{{ site.ht-facebook }}" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      <a href="{{ site.ht-linkedin }}" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+      <a href="{{ site.ht-podcast }}" target="_blank"><i class="fa-solid fa-podcast fa-2x"></i></a>
+      <a href="{{ site.ht-spotify }}" target="_blank"><i class="fa-brands fa-spotify fa-2x"></i></a>
+    </div>
+  </section>
+
+  <div class="grid-x align-center grid-padding-x">
+  {% assign hospitality-talks_order = site.hospitality-talks | sort: 'date' | reverse %}
+  {% assign i = 1 %}
+
+    {% for session in hospitality-talks_order %}
+      {% if i <=4 %}
+      <div class="cell session-container">
+        <iframe width="100%" src="{{ session.video | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>{{session.title}}</h2>
+        <p>{{session.description}}</p>
+      </div>
+      {% assign i = i | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    <!-- TODO make this CTA good -->
+    <div class="cell grid-x align-middle">
+      <div class="cell banner grid-x">
+        <div class="cell small-12 medium-auto">
+          <img src="/img/hospitality-talks-logo-blue.svg" alt="Hospitality Talks Logo">
+        </div>
+        <div class="cell small-12 medium-shrink">
+          <a href="{{ site.ht-youtube }}" target="_blank">
+            <div class="subscribe-button grid-x align-middle align-center">
+              <span class="cell shrink">Subscribe</span>
+              <i class="cell shrink fa-brands fa-youtube fa-2x"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

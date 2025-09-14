@@ -1,18 +1,29 @@
 <footer>
   <div class="grid-container">
-    <div class="grid-x align-spaced align-middle content-wrapper">
-      <div class="cell medium-6">
+    <div class="grid-x align-justify content-wrapper">
+      <div class="cell medium-shrink">
         <a href="{{ site.baseurl }}/">
           {%- include logo.svg color="#000" location="footer"-%}
         </a>
       </div>
-      <div class="cell medium-shrink social">
-        <a href="mailto:{{site.ab-email}}?subject=AB Ambassadors" target="_blank">
-          <i class="fab fas fa-envelope fa-2x"></i>
-        </a>
-        <a href="{{site.abambassadors-linkedin}}" target="_blank">
-          <i class="fab fab fa-linkedin fa-2x"></i>
-        </a>
+      <div class="grid-x cell medium-auto align-right social">
+        <div class="main-links cell medium-shrink">
+          <div class="nav-item"><a href="{{ site.baseurl }}/">Our Services</a></div>
+          <div class="nav-item"><a href="{% link hospitality-talks.html %}">Hospitality Talks</a></div>
+        </div>
+        <div class="connect-links cell medium-shrink">
+          <div class="nav-item section-title">Connect</div>
+          <div class="nav-item"><a href="{{site.abambassadors-linkedin}}" target="_blank">LinkedIn</a></div>
+          <div class="nav-item"><a href="mailto:{{site.ab-email}}" target="_blank">Email</a></div>
+        </div>
+        <div class="hospitality-talks-links cell medium-shrink">
+          <div class="nav-item section-title">Hospitality Talks</div>
+          <div class="nav-item"><a href="{{site.ht-youtube}}" target="_blank">YouTube</a></div>
+          <div class="nav-item"><a href="{{site.ht-facebook}}" target="_blank">Facebook</a></div>
+          <div class="nav-item"><a href="{{site.ht-linkedin}}" target="_blank">LinkedIn</a></div>
+          <div class="nav-item"><a href="{{site.ht-podcast}}" target="_blank">Apple Podcast</a></div>
+          <div class="nav-item"><a href="{{site.ht-spotify}}" target="_blank">Spotify</a></div>
+        </div>
       </div>
     </div>
   </div>

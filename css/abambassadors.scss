@@ -94,6 +94,28 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
+.top-nav{
+  font-weight: $bold;
+  font-size: 1.5rem;
+  margin-block-end: 5rem;
+  padding-block-end: 2rem;
+  border-bottom: 1px #979797 solid;
+  @include breakpoint (small only){
+    margin-block-end: 3rem;
+    padding-block-end: 1rem;
+    font-size: 1.25rem;
+  }
+  .nav-item{
+    text-align: center;
+    &:first-of-type{
+      border-right: 1px #979797 solid;
+    }
+  }
+  a{
+    color: $pure-black;
+  }
+}
+
 .main-content{
   background-color: $pure-white;
   padding: 4rem;

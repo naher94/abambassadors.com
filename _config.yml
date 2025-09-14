@@ -21,3 +21,6 @@ markdown: kramdown
 collections:
   services:
     output: false
+  
+  hospitality-talks:
+    output: false

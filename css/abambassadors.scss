@@ -78,19 +78,18 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .featured-button{
-  border-radius: $pill-radius;
   padding: 0.5rem 1.5rem;
   display: inline-block;
   border-style: solid;
   border-width: 3px;
-  border-color: $pure-black;
+  border-color: $pure-white;
   text-align: center;
-  color: $pure-black;
+  color: $pure-white;
   font-weight: $bold;
   transition: all 0.20s ease-in-out;
   &:hover{
-    background-color: $pure-black;
-    color: $pure-white;
+    background-color: $pure-white;
+    color: $aba-orange;
     text-decoration: none;
   }
 }
@@ -129,19 +128,46 @@ h1,h2,h3,h4,h5,h6{
       }
     }
   }
-  .contact-container{
+  .cta-container{
     margin-block-start: 4rem;
-    background-color: rgba($aba-orange,0.3);
+    background-color: $aba-orange;
     padding: 3rem 1rem;
+    color: $pure-white;
+    overflow: hidden;
+    position: relative;
     h2{
-      font-size: 4rem;
+      font-size: 2rem;
       font-weight: $black;
+      margin-bottom: 0;
       @include breakpoint(small only){
         font-size: 2.5rem;
       }
     }
-    .cell{
-      text-align: center;
+    p{
+      font-size: 1.75rem;
+    }
+    .shapes{
+      position: absolute;
+      border: 1rem solid rgba($pure-white,0.3);
+      aspect-ratio: 1/1;
+      width: 10rem;
+      rotate: 45deg;
+      padding: 2rem;
+      .shape{
+        border: 0.5rem solid rgba($pure-white,0.3);
+        aspect-ratio: 1/1;
+      }
+      &-1{
+        top: -5rem;
+        left: 5rem;
+      }
+      &-2{
+        bottom: -5rem;
+        right: 10rem;
+        @include breakpoint (small only){
+          right: 5rem;
+        }
+      }
     }
   }
 }
@@ -217,7 +243,7 @@ footer{
     }
     .main-links{
       font-size: 1.25rem;
-      font-weight: bold;
+      font-weight: $bold;
     }
     .section-title{
       color: #929292;

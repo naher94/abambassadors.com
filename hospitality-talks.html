@@ -30,24 +30,21 @@ layout: default
       </div>
       {% assign i = i | plus: 1 %}
       {% endif %}
-      {% if i == 3 %}
-          <div class="cell medium-10 grid-x align-middle">
-            <div class="cell banner grid-x">
-              <div class="cell small-12 medium-auto">
-                <img src="/img/hospitality-talks-logo-blue.svg" alt="Hospitality Talks Logo">
-              </div>
-              <div class="cell small-12 medium-shrink">
-                <a href="{{ site.ht-youtube }}" target="_blank">
-                  <div class="subscribe-button grid-x align-middle align-center">
-                    <span class="cell shrink">Subscribe</span>
-                    <i class="cell shrink fa-brands fa-youtube fa-2x"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        {% endif %}
     {% endfor %}
+    <div class="cell medium-10 grid-x align-middle">
+      <div class="cell banner grid-x">
+        <div class="cell small-12 medium-auto">
+          <img src="/img/hospitality-talks-logo-blue.svg" alt="Hospitality Talks Logo">
+        </div>
+        <div class="cell small-12 medium-shrink">
+          <a href="{{ site.ht-youtube }}" target="_blank">
+            <div class="subscribe-button grid-x align-middle align-center">
+              <span class="cell shrink">Subscribe</span>
+              <i class="cell shrink fa-brands fa-youtube fa-2x"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

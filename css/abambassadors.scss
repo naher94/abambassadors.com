@@ -69,7 +69,7 @@ $main-content-shift: 20vh;
 body{
   background-color: $aba-grey;
   font-family: $lato;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -148,7 +148,7 @@ h1,h2,h3,h4,h5,h6{
 
 #abambassador-logo{
   &-footer{
-    height: 4rem;
+    height: 3rem;
   }
   &-header{
     height: 8rem;
@@ -181,23 +181,51 @@ header{
 
 footer{
   padding: 4rem 0;
-  .content-wrapper{
-    @include breakpoint(small only){
-      text-align: center;
-    }
+  @include breakpoint (small only){
+    padding: 4rem 2rem; 
   }
   .social{
+    .main-links, .connect-links{
+      margin-inline-end: 6rem;
+      @include breakpoint (small only){
+        margin-inline-end: 0;
+      }
+    }
+    .main-links{
+      border-right: 1px #979797 solid;
+      padding-inline-end: 6rem;
+      @include breakpoint (small only){
+        margin-block-start: 3rem;
+        padding-inline-end: 0;
+        border-right: 0;
+        // border-bottom: 1px #979797 solid;
+        padding-block-end: 2rem;
+        margin-block-end: 2rem;
+      }
+      .nav-item{
+        margin-block-end: 1rem;
+      }
+    }
+    .connect-links{
+      margin-block-end: 2rem;
+    }
+    .nav-item{
+      display: block;
+      &:not(:first-of-type){
+        margin-block-end: 1rem;
+      }
+    }
+    .main-links{
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .section-title{
+      color: #929292;
+      margin-block-end: 1.5rem;
+    }
     a{
       color: $pure-black;
-      &:not(:last-of-type){
-        margin-right: 1rem;
-      }
-      &:hover, &:focus{
-        .fab, .fas{
-          color: $aba-orange;
-          animation: boing 300ms ease-out;
-        }
-      }
+      display: inline;
     }
   }
 }

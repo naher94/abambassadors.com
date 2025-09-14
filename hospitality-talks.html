@@ -26,7 +26,7 @@ layout: default
 
     {% for session in hospitality-talks_order %}
       {% if i <=4 %}
-      <div class="cell medium-10 session-container">
+      <div class="cell session-container">
         <iframe width="100%" src="{{ session.video | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h2>{{session.title}}</h2>
         <p>{{session.description}}</p>
@@ -35,7 +35,7 @@ layout: default
       {% endif %}
     {% endfor %}
     <!-- TODO make this CTA good -->
-    <div class="cell medium-10 grid-x align-middle">
+    <div class="cell grid-x align-middle">
       <div class="cell banner grid-x">
         <div class="cell small-12 medium-auto">
           <img src="/img/hospitality-talks-logo-blue.svg" alt="Hospitality Talks Logo">

@@ -290,7 +290,7 @@ footer{
       }
     }
     p{
-      font-size: 2rem;
+      font-size: 1.6rem;
       @media screen and (max-width: 40em){
         font-size: 1.3rem;
       }
@@ -345,8 +345,6 @@ footer{
   .banner{
     background-color: rgba($hospitality-talks-blue, 0.1);
     padding: 3rem 6rem;
-    border-radius: 30px;
-    margin-bottom: 7rem;
     @media screen and (max-width: 40em){
       margin-bottom: 4rem;
       padding: 1.5rem;
@@ -356,9 +354,11 @@ footer{
         margin-bottom: 2rem;
       }
     }
+    a{
+      text-decoration: none;
+    }
     .subscribe-button{
       background-color: $hospitality-talks-blue;
-      border-radius: $pill-radius;
       padding: 1rem 2rem;
       color: white;
       font-weight: $bold;

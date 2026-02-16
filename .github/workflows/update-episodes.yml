@@ -14,9 +14,20 @@ jobs:
 
       - name: Fetch YouTube RSS feed
         run: |
-          curl -s -A "Mozilla/5.0 (compatible; GitHubActions)" \
+          curl --fail --retry 3 --retry-delay 5 -s \
+            -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCVBfsbg4K5sq6aPljJdWDBg" \
             -o youtube-feed.xml
+
+      - name: Validate feed
+        run: |
+          if ! head -1 youtube-feed.xml | grep -q '<?xml'; then
+            echo "Error: Downloaded file is not valid XML. YouTube may have returned an error page."
+            echo "First 5 lines of downloaded file:"
+            head -5 youtube-feed.xml
+            exit 1
+          fi
+          echo "Feed validated as XML"
 
       - name: Generate episode files
         run: python3 _scripts/update-episodes.py youtube-feed.xml

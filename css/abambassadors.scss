@@ -17,8 +17,7 @@ $aba-grey: #EDEDED;
 
 $aba-orange: #FF902B;
 
-$hospitality-talks-blue: #0900A7;
-$hospitality-talks-blue-dark: darken($hospitality-talks-blue,20%);
+$hospitality-talks-purple: #7E249E;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
@@ -283,10 +282,10 @@ footer{
   .intro{
     margin-bottom: 6rem;
     img{
-      height: 4rem;
+      height: 10rem;
       margin-bottom: 2rem;
       @media screen and (max-width: 40em){
-        margin-bottom: 0.5rem;
+        height: 6rem;
       }
     }
     p{
@@ -309,7 +308,7 @@ footer{
         }
         &:hover, &:focus{
           .fa-brands, .fa-solid{
-            color: $hospitality-talks-blue;
+            color: $hospitality-talks-purple;
             animation: boing 300ms ease-out;
           }
         }
@@ -343,22 +342,29 @@ footer{
     }
   }
   .banner{
-    background-color: rgba($hospitality-talks-blue, 0.1);
+    background-color: rgba($hospitality-talks-purple, 0.1);
     padding: 3rem 6rem;
     @media screen and (max-width: 40em){
       margin-bottom: 4rem;
       padding: 1.5rem;
+      justify-content: center;
     }
-    img{
+    svg{
+      g{
+        fill: $hospitality-talks-purple;
+      }
+    }
+    .logo-wrapper{
       @media screen and (max-width: 40em){
         margin-bottom: 2rem;
+        margin-top: 1rem;
       }
     }
     a{
       text-decoration: none;
     }
     .subscribe-button{
-      background-color: $hospitality-talks-blue;
+      background-color: $hospitality-talks-purple;
       padding: 1rem 2rem;
       color: white;
       font-weight: $bold;

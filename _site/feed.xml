@@ -4,10 +4,10 @@
     <title>AB Ambassadors</title>
     <description>AB Ambassadors is an independent global tourism and hospitality advisory and asset management firm to help organizations achieve their goals by providing strategic guidance. The focused initiatives include addressing operations for optimum efficiency, maximizing revenue generation, and focused sales &amp; marketing activities. Support areas and practice include leadership development, project master planning review, predevelopment analysis, due diligence, repositioning, food and beverage consulting, operator selection and asset management.
 </description>
-    <link>http://localhost:4002/</link>
-    <atom:link href="http://localhost:4002/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Sep 2025 22:43:09 -0700</pubDate>
-    <lastBuildDate>Tue, 16 Sep 2025 22:43:09 -0700</lastBuildDate>
+    <link>http://localhost:4001/</link>
+    <atom:link href="http://localhost:4001/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 16 Feb 2026 12:03:44 -0800</pubDate>
+    <lastBuildDate>Mon, 16 Feb 2026 12:03:44 -0800</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
     
   </channel>

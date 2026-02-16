@@ -8,7 +8,7 @@ layout: default
   <section class="intro grid-x grid-padding-x">
     <div class="cell">
       <h1 class="visually-hidden">Hospitality Talks</h1>
-      <img src="/img/hospitality-talks-logo.svg" alt="Hospitality Talks Logo">
+      <img src="/img/ht-lockup.svg" alt="Hospitality Talks Logo">
       <p>This global forum brings together professionals from across the lodging and hospitality industry to connect, collaborate, and engage in meaningful dialogue.</p>
       <p>Our mission is to foster open, solutions-driven conversations around the most pressing challenges and opportunities facing the industry today — from shifting market dynamics to innovation, sustainability, and workforce transformation.</p>
       <p>We aim to create a platform where industry stakeholders — including owners, operators, developers, advisors, and investors — can share insights, build partnerships, and work collectively toward the greater good of the global hospitality ecosystem.</p>
@@ -38,9 +38,9 @@ layout: default
     {% endfor %}
     <!-- TODO make this CTA good -->
     <div class="cell grid-x align-middle">
-      <div class="cell banner grid-x">
-        <div class="cell small-12 medium-auto">
-          <img src="/img/hospitality-talks-logo-blue.svg" alt="Hospitality Talks Logo">
+      <div class="cell banner grid-x align-middle align-justify">
+        <div class="cell small-8 medium-3 logo-wrapper">
+          {%- include_relative /img/ht-lockup.svg -%}
         </div>
         <div class="cell small-12 medium-shrink">
           <a href="{{ site.ht-youtube }}" target="_blank">

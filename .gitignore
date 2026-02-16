@@ -1,3 +1,22 @@
+# Jekyll build output
 _site/
-/_site/
+
+# Jekyll caches
+.jekyll-cache/
+.jekyll-metadata
 .sass-cache/
+
+# Ruby / Bundler
+Gemfile.lock
+.bundle/
+vendor/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# GitHub Action temp file
+youtube-feed.xml

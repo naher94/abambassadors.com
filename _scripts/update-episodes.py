@@ -121,6 +121,15 @@ def main():
         print(f"Error: Feed file not found: {feed_path}")
         sys.exit(1)
 
+    # Validate that the file is XML before parsing
+    with open(feed_path, "r") as f:
+        first_line = f.readline().strip()
+    if not first_line.startswith("<?xml"):
+        print(f"Error: {feed_path} is not valid XML.")
+        print(f"First line: {first_line[:200]}")
+        print("YouTube may have returned an error page instead of the RSS feed.")
+        sys.exit(1)
+
     tree = ET.parse(feed_path)
     root = tree.getroot()
 

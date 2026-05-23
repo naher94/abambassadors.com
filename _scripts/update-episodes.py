@@ -105,6 +105,13 @@ def clean_description(desc: str) -> str:
     return result
 
 
+def is_short_or_clip(title: str, description: str) -> bool:
+    """Return True if the video appears to be a YouTube Short or Clip."""
+    combined = f"{title} {description}".lower()
+    short_clip_tags = re.compile(r"#(shorts?|clips?|youtubeshorts?)\b")
+    return bool(short_clip_tags.search(combined))
+
+
 def escape_yaml_title(title: str) -> str:
     """Escape a title for use in YAML double-quoted string."""
     return title.replace("\\", "\\\\").replace('"', '\\"')
@@ -159,7 +166,12 @@ def main():
         published = published_el.text.strip()
 
         desc_el = media_group.find("media:description", NAMESPACES) if media_group is not None else None
-        description = clean_description(desc_el.text if desc_el is not None and desc_el.text else "")
+        raw_description = desc_el.text if desc_el is not None and desc_el.text else ""
+        description = clean_description(raw_description)
+
+        if is_short_or_clip(title, raw_description):
+            print(f"  Skipped (Short/Clip): {title}")
+            continue
 
         slug = generate_slug(title)
         file_path = os.path.join(COLLECTION_DIR, f"{slug}.md")

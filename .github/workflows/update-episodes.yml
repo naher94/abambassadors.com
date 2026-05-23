@@ -19,22 +19,29 @@ jobs:
             -o youtube-feed.xml
 
       - name: Validate feed
+        id: validate
         run: |
           if ! head -1 youtube-feed.xml | grep -q '<?xml'; then
-            echo "Error: Downloaded file is not valid XML. YouTube may have returned an error page."
+            echo "Warning: YouTube did not return a valid feed (likely a temporary block or rate-limit)."
             echo "First 5 lines of downloaded file:"
             head -5 youtube-feed.xml
-            exit 1
+            echo "Skipping this run — will retry on next scheduled run."
+            echo "valid=false" >> $GITHUB_OUTPUT
+          else
+            echo "Feed validated as XML"
+            echo "valid=true" >> $GITHUB_OUTPUT
           fi
-          echo "Feed validated as XML"
 
       - name: Generate episode files
+        if: steps.validate.outputs.valid == 'true'
         run: python3 _scripts/update-episodes.py youtube-feed.xml
 
       - name: Clean up feed file
+        if: always()
         run: rm -f youtube-feed.xml
 
       - name: Commit new episodes
+        if: steps.validate.outputs.valid == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

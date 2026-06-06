@@ -19,5 +19,5 @@ content:
         required: true
       - name: date
         label: Date
-        type: date
+        type: datetime
         required: true

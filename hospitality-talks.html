@@ -31,7 +31,7 @@ layout: default
       <div class="cell session-container">
         <iframe width="100%" src="{{ session.video | replace: 'https://youtu.be/', 'https://www.youtube.com/embed/' }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h2>{{session.title}}</h2>
-        <p>{{session.description}}</p>
+        <p>{{session.description | newline_to_br}}</p>
       </div>
       {% assign i = i | plus: 1 %}
       {% endif %}

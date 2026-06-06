@@ -46,7 +46,7 @@ def generate_slug(title: str) -> str:
 def format_date(iso_date: str) -> str:
     """Convert ISO 8601 date to Jekyll front matter format."""
     dt = datetime.fromisoformat(iso_date)
-    return dt.strftime("%Y-%m-%d") + " 00:00:00 -0500"
+    return dt.strftime("%Y-%m-%d")
 
 
 def clean_description(desc: str) -> str:

@@ -1,0 +1,23 @@
+content:
+  - name: hospitality-talks
+    label: Hospitality Talks Episodes
+    type: collection
+    path: _hospitality-talks
+    filename: "{fields.title | slugify}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: video
+        label: YouTube Video URL
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true

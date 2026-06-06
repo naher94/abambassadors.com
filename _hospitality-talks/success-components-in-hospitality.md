@@ -5,5 +5,5 @@ description: |
   
   Chapters
 video: https://youtu.be/eK91Vo6f7sE
-date: 2026-05-20 00:00:00 -0500
+date: 2026-05-20
 ---

@@ -33,5 +33,5 @@ description: |
   Abid Butt on LinkedIn - https://www.linkedin.com/in/AbidButt
   Sam-Erik Ruttmann on LinkedIn - https://www.linkedin.com/in/sam-erik
 video: https://youtu.be/-ZMJYAF4Sdk
-date: 2026-05-27 00:00:00 -0500
+date: 2026-05-27
 ---

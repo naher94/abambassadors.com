@@ -12,14 +12,13 @@ description: >
   markets. 
 
 
-  In this conversation, Tom Luersen discusses the evolution of the hospitality
-  industry, focusing on creating unique brand experiences, the shift towards
-  experience-based travel, and the integration of technology in guest
-  acquisition and operational efficiencies. He emphasizes the importance of
-  understanding homeowner needs in residential resort management and shares
-  insights on the future of budgeting and workforce dynamics in the face of
-  technological advancements. Luersen expresses optimism for the industry while
-  acknowledging potential challenges.
+  Tom discusses the evolution of the hospitality industry, focusing on creating
+  unique brand experiences, the shift towards experience-based travel, and the
+  integration of technology in guest acquisition and operational efficiencies.
+  He emphasizes the importance of understanding homeowner needs in residential
+  resort management and shares insights on the future of budgeting and workforce
+  dynamics in the face of technological advancements. Luersen expresses optimism
+  for the industry while acknowledging potential challenges.
 video: https://youtu.be/QE3e7VZgxbk
 date: 2026-06-17
 ---

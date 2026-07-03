@@ -15,3 +15,4 @@ The script skips any video whose title or description contains one of the follow
 | `#clips` or `#clip` | YouTube Clips |
 
 To ensure a Short or Clip is never published to the site, add at least one of the relevant hashtags to the **YouTube video description** before the feed is fetched.
+

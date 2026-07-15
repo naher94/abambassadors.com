@@ -1,16 +1,17 @@
 ---
 title: "The Untapped ROI of AI in Hospitality: Automating Tasks & Boosting Revenues"
 description: >-
-  Travel has evolved significantly over the years, shaped by technology and
-  changing consumer preferences. In this conversation with Shane O'Flaherty,
-  Global Director, Travel, Transportation, and Hospitality - Microsoft, we
-  discuss the intersection of technology and personalization in the hospitality
-  industry. We also explore the challenges of hyper-personalization, the
-  importance of data, and the role of AI in enhancing customer experiences. The
-  discussion also covers consumer trust in AI, the evolution of digital
-  identity, and the future of robotics in hospitality. They emphasize the need
-  for a balanced approach to technology adoption, ensuring that it enhances
-  rather than detracts from the human experience.
+  Travel has undergone significant evolution over the years, shaped by
+  advancements in technology and shifting consumer preferences. In this
+  conversation with Shane O'Flaherty, Global Director, Travel, Transportation,
+  and Hospitality - Microsoft, we discuss the intersection of technology and
+  personalization in the hospitality industry. We also examine the challenges of
+  hyper-personalization, the significance of data, and the role of AI in
+  improving customer experiences. The discussion also covers consumer trust in
+  AI, the evolution of digital identity, and the future of robotics in
+  hospitality. They emphasize the need for a balanced approach to technology
+  adoption, ensuring that it enhances rather than detracts from the human
+  experience.
 
 
   Key takeaways:

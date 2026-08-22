@@ -19,4 +19,4 @@ The script skips a video if either is true:
   | `#youtubeshorts` | YouTube Shorts (alternate tag) |
   | `#clips` or `#clip` | YouTube Clips |
 
-To ensure a longer Short or Clip is never published to the site, add at least one of the relevant hashtags to the **YouTube video description** before the feed is fetched.
+To ensure a Short or Clip is never published to the site, add at least one of the relevant hashtags to the **YouTube video description** before the feed is fetched.

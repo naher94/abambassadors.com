@@ -56,6 +56,6 @@ description: >
   • Conscious travelers can reduce their impact through mindful choices.
 
   • Future leaders in tourism need to adopt systemic thinking.
-video: https://youtu.be/cNSvoKxyeLU
+video: https://youtu.be/CT5i2vldUlY?si=euyuxPmFNMnnMBxM
 date: 2026-11-04
 ---
